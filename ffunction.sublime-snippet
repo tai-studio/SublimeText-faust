@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+ffunction(${1:float} ${2:fname} (${3:float}), ${4:<math.h>}, ${5:""});
+]]></content>
+	<tabTrigger>ffunction</tabTrigger>
+	<scope>source.faust</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+process = ${1:_}$0
+]]></content>
+	<tabTrigger>process</tabTrigger>
+	<scope>source.python</scope>
+</snippet>
