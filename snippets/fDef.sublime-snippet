@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+//---------------------------------`(${1:b}.)${2:maskedOr}`---------------------------------------
+// bit-wise OR of selected bits of two integers. remaining bits are kept from first parameter
+//
+// #### Usage
+//
+// ```
+// ${2:maskedOr}(${3:mask, a, b})
+// ```
+//-----------------------------------------------------------------------------
+${2:maskedOr}(${3:mask, a, b}) = $0;
+]]></content>
+	<tabTrigger>fDef</tabTrigger>
+	<scope>source.faust</scope>
+</snippet>

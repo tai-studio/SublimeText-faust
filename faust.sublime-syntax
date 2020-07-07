@@ -22,6 +22,10 @@ contexts:
     - include: operators
     - include: imports
     - include: variables
+    - include: constants
+    - include: primitives
+    - include: gui
+
 
   keywords:
     # Note that blackslashes don't need to be escaped within single quoted
@@ -31,16 +35,30 @@ contexts:
     - match: '\b(float|int)\b'
       scope: keyword.control.faust
 
+  primitives:
+    - match: '\b(mem|prefix|int|float|rdtable|rwtable|select2|select3|ffunction|fconstant|fvariable|acos|asin|atan|atan2|cos|sin|tan|exp|log|log10|pow|sqrt|abs|fabsf|min|max|fmod|remainder|floor|ceil|rint)\b'
+      scope: variable.language.faust
+
+  gui:
+    - match: '\b(button|checkbox|vslider|hslider|nentry|vgroup|hgroup|tgroup|vbargraph|hbargraph|attach)\b'
+      scope: variable.language.faust
+
   imports:
-    - match: '\b(import|declare)\b'
+    - match: '\b(import|declare|library|component|environment)\b'
       scope: keyword.import.faust
+
   variables:
     - match: '\b(process)\b'
-      scope: keyword.context.faust
+      scope: variable.language.faust
+
+  constants:
+    - match: '\b[A-Z_]*\b'
+      scope: constant.language.faust
 
   operators:
-    - match: '~|:|!|%|&|\*|\-|\+|==|=|!=|!=|<=|<!|>=|<|>|!|&&|\|\|'
+    - match: '\b(with|letrec|case|seq|par|sum|prod|~|:|!|%|&|\*|\-|\+|==|=|!=|!=|<=|<!|>=|<|>|!|&&|\|\|)\b'
       scope: keyword.operator.faust
+
   numbers:
     - match: '\b(-)?[0-9.]+\b'
       scope: constant.numeric.faust
